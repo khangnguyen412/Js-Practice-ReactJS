@@ -2,7 +2,7 @@ import React from "react";
 import logo from './logo.svg';
 import './App.css';
 
-import Helloworld from "./chapter-02/examples/lecture01-start-learning";
+import Intro from "./chapter-02/examples/lecture01-intro";
 
 const AppDefault = () => {
   return (
@@ -26,7 +26,7 @@ function App() {
     //   <AppDefault></AppDefault>
     // </React.StrictMode>
     <React.StrictMode>
-        <Helloworld></Helloworld>
+        <Intro></Intro>
     </React.StrictMode>
 
   );

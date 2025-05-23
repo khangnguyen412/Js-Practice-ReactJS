@@ -9,7 +9,7 @@ import React from "react";
  * @returns 
 */
 const Name = 'khang';
-function Helloworld() {
+function Introreact() {
     return (
         <React.StrictMode>
             <h1>Welcome to my app, {Name}. This is first lectures of Reactjs</h1>
@@ -18,4 +18,4 @@ function Helloworld() {
     )
 }
 
-export default Helloworld
+export default Introreact

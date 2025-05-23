@@ -1,0 +1,13 @@
+name: reactjs-learning
+
+services:
+    react:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        container_name: Laravel-React-Frontend
+        ports:
+            - 3002:3000
+        volumes:
+            - ./:/app
+        restart: always

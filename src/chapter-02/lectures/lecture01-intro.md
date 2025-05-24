@@ -6,13 +6,12 @@
 - Cấu trúc dự án ReactJS
 - Chạy ứng dụng đầu tiên
 
-
 ## Tài liệu tham khảo
 - Link tham khảo: https://reactjs.org/docs/getting-started.html
 
 ## Các file Sử Dụng
 - src/app.jsx
-- src/chapter-02/examples/lecture01-start-learning.jsx
+- src/chapter-02/examples/lecture01-intro.jsx
 
 ## Cấu trúc chính
 ```

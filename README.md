@@ -4,7 +4,7 @@
 
 ## Technology in project:
 - Language: HTML, CSS, JS
-- Nodejs 16
+- Nodejs
 - Tailwind
 - Docker
 - Reactjs

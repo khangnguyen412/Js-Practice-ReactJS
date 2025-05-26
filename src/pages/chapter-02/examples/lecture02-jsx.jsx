@@ -12,7 +12,9 @@ import React from "react";
  *  @returns 
 */
 function JSX() {
-    const Name = 'khang';
+    const full_name = 'khang';
+    const check_admin = true;
+    const fruit_arr = ['Táo', 'Chuối', 'Cam'];
     return (
         <React.Fragment>
             {/* 
@@ -23,11 +25,20 @@ function JSX() {
             */}
             <h1>Chapter 2 - Lecture 1</h1>
 
+            {/* Nhúng biến vào 1 html  */}
+            <h1> Đây là biểu thức nhúng biến: {full_name}</h1>
 
-            {/*
-            - Nhúng biến vào 1 html 
-            */}
-            <h1> Đây là biểu thức nhúng biến: {Name}</h1>
+            {/* Điều kiện và danh sách trong JSX */}
+            <span>
+                {check_admin ? <p>Đã đăng nhập</p> : <p>Chưa Đăng Nhập</p>}
+            </span>
+
+            {/* Render với .map() */}
+            <ul>
+                {fruit_arr.map((value, index) => (
+                    <li key={index}>{value}</li>
+                ))}
+            </ul>
         </React.Fragment>
     )
 

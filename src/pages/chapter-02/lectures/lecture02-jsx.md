@@ -1,4 +1,4 @@
-# Bài 1: Giới thiệu ReactJS
+# Bài 2: JSX
 
 ## Nội dung
 - Hiểu rõ JSX là gì
@@ -10,7 +10,6 @@
 - Link tham khảo:   https://reactjs.org/docs/introducing-jsx.html
 
 ## Các file Sử Dụng
-
 - src/chapter-02/examples/lecture02-jsx.jsx
 
 ## Note và cài đặt

@@ -11,7 +11,7 @@
 
 ## Các file Sử Dụng
 - src/app.jsx
-- src/chapter-02/examples/lecture01-intro.jsx
+- src/pages/chapter-02/lectures/lecture01-intro.md
 
 ## Cấu trúc chính
 ```

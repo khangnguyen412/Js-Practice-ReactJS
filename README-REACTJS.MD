@@ -43,11 +43,4 @@ npm audit fix --force
 ```
 
 ## Practice React
-### Chap 1 - lecture 1: 
-- src/chapter-01/lectures/lecture01-intro.md
-
-### Chap 2 - lecture 1: 
-- src/chapter-02/lectures/lecture01-intro.md
-
-### Chap 2 - lecture 2:
-- src/chapter-02/lectures/lecture02-jsx.md
+- Được note lại trong: ./src

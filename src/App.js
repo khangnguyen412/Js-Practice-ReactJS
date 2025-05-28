@@ -1,30 +1,40 @@
 import React from "react";
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Welcome from './pages/welcome';
+import ChooseLecture from './pages/lecture';
+import Chap2Lecture01 from './pages/chapter-02/examples/lecture01-intro';
+import Chap2Lecture02 from './pages/chapter-02/examples/lecture02-jsx';
+import Chap2Lecture03FC from './pages/chapter-02/examples/lecture03-function-component';
+import Chap2Lecture03CC from './pages/chapter-02/examples/lecture03-class-component';
 
 function App() {
   return (
     <React.StrictMode>
       <Router>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" >
-              Learn React
-            </a>
-            <div>
-              <Link to="/welcome">Lecture 3</Link>
-            </div>
-          </header>
-        </div>
         <Routes>
-          <Route>
-            <Route path='/welcome' element={<Welcome></Welcome>}></Route>
+          <Route element={<Welcome></Welcome>}>
+            <Route index element={<Welcome></Welcome>} />
+          </Route>
+
+          <Route element={<ChooseLecture></ChooseLecture>}>
+            <Route path="/choose-lecture" element={<ChooseLecture></ChooseLecture>} />
+          </Route>
+          
+          <Route element={<Chap2Lecture01></Chap2Lecture01>}>
+            <Route path="/chapter2-lecture1" element={<Chap2Lecture01></Chap2Lecture01>} />
+          </Route>
+          
+          <Route element={<Chap2Lecture02></Chap2Lecture02>}>
+            <Route path="/chapter2-lecture2" element={<Chap2Lecture02></Chap2Lecture02>} />
+          </Route>
+          
+          <Route element={<Chap2Lecture03FC></Chap2Lecture03FC>}>
+            <Route path="/chapter2-lecture3-function-component" element={<Chap2Lecture03FC></Chap2Lecture03FC>} />
+          </Route>
+          
+          <Route element={<Chap2Lecture03CC></Chap2Lecture03CC>}>
+            <Route path="/chapter2-lecture3-class-component" element={<Chap2Lecture03CC></Chap2Lecture03CC>} />
           </Route>
         </Routes>
       </Router>

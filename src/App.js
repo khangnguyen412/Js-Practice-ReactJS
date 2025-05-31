@@ -7,6 +7,7 @@ import Chap2Lecture01 from './pages/chapter-02/examples/lecture01-intro';
 import Chap2Lecture02 from './pages/chapter-02/examples/lecture02-jsx';
 import Chap2Lecture03FC from './pages/chapter-02/examples/lecture03-function-component';
 import Chap2Lecture03CC from './pages/chapter-02/examples/lecture03-class-component';
+import Chap2Lecture04 from './pages/chapter-02/examples/lecture04-props';
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
           
           <Route element={<Chap2Lecture03CC></Chap2Lecture03CC>}>
             <Route path="/chapter2-lecture3-class-component" element={<Chap2Lecture03CC></Chap2Lecture03CC>} />
+          </Route>
+          
+          <Route element={<Chap2Lecture04></Chap2Lecture04>}>
+            <Route path="/chapter2-lecture4" element={<Chap2Lecture04></Chap2Lecture04>} />
           </Route>
         </Routes>
       </Router>

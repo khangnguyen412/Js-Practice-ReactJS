@@ -13,3 +13,15 @@ Giải thích vì sao chỉ có một file index.html
 - src/app.jsx
 - src/pages/chapter-01/lectures/lecture01-intro.md
 
+## Note và cài đặt
+### Cài đặt lại port để chạy
+- Chạy câu lệnh để cài đặt cross-env:
+```
+npm install cross-env --save-dev
+```
+- Vào package.json cấu hình lại:
+```
+"scripts": {
+  "start": "cross-env PORT=3003 react-scripts start"
+}
+```

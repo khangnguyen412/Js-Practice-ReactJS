@@ -9,13 +9,16 @@ const Lecture = () => {
                     <Link to="/chapter2-lecture1">Lecture 1</Link>
                 </li>
                 <li>
-                    <Link to="/chapter2-lecture2">Lecture 2</Link>
+                    <Link to="/chapter2-lecture2">Lecture 2 - JSX</Link>
                 </li>
                 <li>
                     <Link to="/chapter2-lecture3-function-component">Lecture 3 - Function Component</Link>
                 </li>
                 <li>
                     <Link to="/chapter2-lecture3-class-component">Lecture 3 - Class Component</Link>
+                </li>
+                <li>
+                    <Link to="/chapter2-lecture4">Lecture 4 - Props</Link>
                 </li>
             </ul>
         </React.Fragment>

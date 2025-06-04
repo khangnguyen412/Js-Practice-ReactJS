@@ -43,11 +43,45 @@ const List = ({ list }) => {
 }
 
 /**
- * 
- * @returns 
+ *  - props dược truyền từ cha xuống dưới dạng obj
  */
+const OBJ = ({obj}) => {
+    return (
+        <React.Fragment>
+            <ul>
+                <li>{obj.name}</li>
+                <li>{obj.age}</li>
+            </ul>
+        </React.Fragment>
+    )
+}
+
+/**
+ *  - props dược truyền từ cha xuống dưới dạng callback
+ */
+const Callback = ({text, callback}) => {
+    return (
+        <React.Fragment>
+            <button onClick={callback}>{text}</button><br />
+        </React.Fragment>
+    )
+}
+
+/**
+ *  - set giá trị mặc định của props
+ */
+const DefaultVal = ({text = 'Người dùng'}) => {
+    return (
+        <React.Fragment>
+            <span>{text}</span>
+        </React.Fragment>
+    )
+}
 
 function Props() {
+    const HandleClick = () => {
+        console.log('truyền props dưới dạng callback') 
+    }
     return (
         <React.Fragment>
             <ChildComponentObj name="Khang"></ChildComponentObj>
@@ -63,6 +97,15 @@ function Props() {
 
             {/* Truyền Mãng */}
             <List list={['React', 'Angular', 'Vue']}></List>
+            
+            {/* Truyền OBJ */}
+            <OBJ obj={{name: 'khang', age: '24'}}></OBJ>
+            
+            {/* Truyền Callback */}
+            <Callback text='click vào đây' callback={HandleClick}></Callback>
+
+            {/* Giá trị mặc định của Default */}
+            <DefaultVal></DefaultVal>
         </React.Fragment>
     )
 }

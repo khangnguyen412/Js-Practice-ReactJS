@@ -11,3 +11,4 @@
 ## Các file Sử Dụng
 - src/App.js
 - src/pages/lecture.jsx
+- src/pages/chapter-02/examples/lecture04-props.jsx

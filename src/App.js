@@ -8,38 +8,43 @@ import Chap2Lecture02 from './pages/chapter-02/examples/lecture02-jsx';
 import Chap2Lecture03FC from './pages/chapter-02/examples/lecture03-function-component';
 import Chap2Lecture03CC from './pages/chapter-02/examples/lecture03-class-component';
 import Chap2Lecture04 from './pages/chapter-02/examples/lecture04-props';
+import Chap2Lecture05 from './pages/chapter-02/examples/lecture05';
 
 function App() {
   return (
     <React.StrictMode>
       <Router>
         <Routes>
-          <Route element={<Welcome></Welcome>}>
+          <Route>
             <Route index element={<Welcome></Welcome>} />
           </Route>
 
-          <Route element={<ChooseLecture></ChooseLecture>}>
+          <Route>
             <Route path="/choose-lecture" element={<ChooseLecture></ChooseLecture>} />
           </Route>
           
-          <Route element={<Chap2Lecture01></Chap2Lecture01>}>
+          <Route>
             <Route path="/chapter2-lecture1" element={<Chap2Lecture01></Chap2Lecture01>} />
           </Route>
           
-          <Route element={<Chap2Lecture02></Chap2Lecture02>}>
+          <Route>
             <Route path="/chapter2-lecture2" element={<Chap2Lecture02></Chap2Lecture02>} />
           </Route>
           
-          <Route element={<Chap2Lecture03FC></Chap2Lecture03FC>}>
+          <Route>
             <Route path="/chapter2-lecture3-function-component" element={<Chap2Lecture03FC></Chap2Lecture03FC>} />
           </Route>
           
-          <Route element={<Chap2Lecture03CC></Chap2Lecture03CC>}>
+          <Route>
             <Route path="/chapter2-lecture3-class-component" element={<Chap2Lecture03CC></Chap2Lecture03CC>} />
           </Route>
           
-          <Route element={<Chap2Lecture04></Chap2Lecture04>}>
+          <Route>
             <Route path="/chapter2-lecture4" element={<Chap2Lecture04></Chap2Lecture04>} />
+          </Route>
+
+          <Route>
+            <Route path="/chapter2-lecture5" element={<Chap2Lecture05></Chap2Lecture05>} />
           </Route>
         </Routes>
       </Router>

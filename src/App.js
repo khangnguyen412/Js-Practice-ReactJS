@@ -9,6 +9,8 @@ import Chap2Lecture03FC from './pages/chapter-02/examples/lecture03-function-com
 import Chap2Lecture03CC from './pages/chapter-02/examples/lecture03-class-component';
 import Chap2Lecture04 from './pages/chapter-02/examples/lecture04-props';
 import Chap2Lecture05 from './pages/chapter-02/examples/lecture05';
+import Chap3Lecture01 from './pages/chapter-03/examples/lecture01-lifecycle';
+import Chap3Lecture02 from './pages/chapter-03/examples/lecture02-useref';
 
 function App() {
   return (
@@ -32,11 +34,11 @@ function App() {
           </Route>
           
           <Route>
-            <Route path="/chapter2-lecture3-function-component" element={<Chap2Lecture03FC></Chap2Lecture03FC>} />
+            <Route path="/chapter2-lecture3-1" element={<Chap2Lecture03FC></Chap2Lecture03FC>} />
           </Route>
           
           <Route>
-            <Route path="/chapter2-lecture3-class-component" element={<Chap2Lecture03CC></Chap2Lecture03CC>} />
+            <Route path="/chapter2-lecture3-2" element={<Chap2Lecture03CC></Chap2Lecture03CC>} />
           </Route>
           
           <Route>
@@ -45,6 +47,14 @@ function App() {
 
           <Route>
             <Route path="/chapter2-lecture5" element={<Chap2Lecture05></Chap2Lecture05>} />
+          </Route>
+          
+          <Route>
+            <Route path="/chapter3-lecture1" element={<Chap3Lecture01></Chap3Lecture01>} />
+          </Route>
+
+          <Route>
+            <Route path="/chapter3-lecture2" element={<Chap3Lecture02></Chap3Lecture02>} />
           </Route>
         </Routes>
       </Router>

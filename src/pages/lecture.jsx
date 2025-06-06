@@ -6,22 +6,28 @@ const Lecture = () => {
         <React.Fragment>
             <ul>
                 <li>
-                    <Link to="/chapter2-lecture1">Lecture 1</Link>
+                    <Link to="/chapter2-lecture1">Chapter 2 - Lecture 1</Link>
                 </li>
                 <li>
-                    <Link to="/chapter2-lecture2">Lecture 2 - JSX</Link>
+                    <Link to="/chapter2-lecture2">Chapter 2 - Lecture 2 - JSX</Link>
                 </li>
                 <li>
-                    <Link to="/chapter2-lecture3-function-component">Lecture 3 - Function Component</Link>
+                    <Link to="/chapter2-lecture3-1">Chapter 2 - Lecture 3 - Function Component</Link>
                 </li>
                 <li>
-                    <Link to="/chapter2-lecture3-class-component">Lecture 3 - Class Component</Link>
+                    <Link to="/chapter2-lecture3-2">Chapter 2 - Lecture 3 - Class Component</Link>
                 </li>
                 <li>
-                    <Link to="/chapter2-lecture4">Lecture 4 - Props</Link>
+                    <Link to="/chapter2-lecture4">Chapter 2 - Lecture 4 - Props</Link>
                 </li>
                 <li>
-                    <Link to="/chapter2-lecture5">Lecture 5 - UseState</Link>
+                    <Link to="/chapter2-lecture5">Chapter 2 - Lecture 5 - UseState</Link>
+                </li>
+                <li>
+                    <Link to="/chapter3-lecture1">Chapter 3 - Lecture 1 - LifeCycle</Link>
+                </li>
+                <li>
+                    <Link to="/chapter3-lecture2">Chapter 3 - Lecture 2 - UseRef</Link>
                 </li>
             </ul>
         </React.Fragment>

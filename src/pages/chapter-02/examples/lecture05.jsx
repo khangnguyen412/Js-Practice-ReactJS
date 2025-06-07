@@ -40,6 +40,37 @@ function UseStateFunc() {
      *  - Khi component mount
      *  - Khi state hoặc props thay đổi (nếu bạn chỉ định trong [deps])
      *  - Có thể dùng để gọi API, subscribe sự kiện, tạo timer,...
+     * 
+     *  Giải thích rõ hơn về useEffect:
+     *  - Được gọi sau mỗi lần render (nếu không có mảng dependency)
+     *  - return () => {...}: hàm dọn dẹp, được gọi trước khi hàm callback chạy lại hoặc component bị hủy
+     *  - [deps]  chỉ định khi nào useEffect được chạy lại
+     * 
+     *  Trường hợp 1:
+     *      const [item, updateItem] = useState(0);
+     *      useEffect(() => {
+     *          console.log('Chạy 1 lần duy nhất khi component mount');
+     *          return () => {
+     *              console.log('Dọn dẹp khi component unmount');
+     *          };
+     *      }, []);
+     *  Giải thích:
+     *  - Chỉ chạy duy nhất 1 lần khi component mount
+     *  - Không bao giờ chạy lại dù biến item có thay đổi hay không
+     *  - Phù hợp để khởi tạo dữ liệu ban đầu, đăng ký sự kiện toàn cục,...
+     * 
+     *  Trường hợp 2:
+     *      const [item, updateItem] = useState(0);
+     *      useEffect(() => {
+     *          console.log('Chạy khi item thay đổi', item);
+     *          return () => {
+     *              console.log('Dọn dẹp trước khi useEffect chạy lại hoặc component unmount');
+     *          };
+     *      }, [item]);
+     *  Giải thích:
+     *  - Chạy lần đầu tiên khi component mount
+     *  - Mỗi khi item thay đổi → useEffect chạy lại
+     *  - Trước khi chạy lại → nếu có hàm return, sẽ chạy hàm dọn dẹp trước
      */
 
     useEffect(() => {

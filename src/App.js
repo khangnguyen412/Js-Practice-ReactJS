@@ -11,6 +11,9 @@ import Chap2Lecture04 from './pages/chapter-02/examples/lecture04-props';
 import Chap2Lecture05 from './pages/chapter-02/examples/lecture05';
 import Chap3Lecture01 from './pages/chapter-03/examples/lecture01-lifecycle';
 import Chap3Lecture02 from './pages/chapter-03/examples/lecture02-useref';
+import Chap3Lecture03 from './pages/chapter-03/examples/lecture03-conditional';
+import Chap3Lecture04 from './pages/chapter-03/examples/lecture04-renderList';
+import Chap3Lecture05 from './pages/chapter-03/examples/lecture05-formhandling';
 
 function App() {
   return (
@@ -55,6 +58,18 @@ function App() {
 
           <Route>
             <Route path="/chapter3-lecture2" element={<Chap3Lecture02></Chap3Lecture02>} />
+          </Route>
+          
+          <Route>
+            <Route path="/chapter3-lecture3" element={<Chap3Lecture03></Chap3Lecture03>} />
+          </Route>
+          
+          <Route>
+            <Route path="/chapter3-lecture4" element={<Chap3Lecture04></Chap3Lecture04>} />
+          </Route>
+          
+          <Route>
+            <Route path="/chapter3-lecture5" element={<Chap3Lecture05></Chap3Lecture05>} />
           </Route>
         </Routes>
       </Router>

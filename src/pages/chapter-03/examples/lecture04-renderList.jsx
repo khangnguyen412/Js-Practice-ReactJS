@@ -1,5 +1,4 @@
 /* eslint-disable */
-import { data } from "jquery";
 import React, { useEffect, useRef, useState } from "react";
 
 /**

@@ -27,23 +27,23 @@ function App() {
           <Route>
             <Route path="/choose-lecture" element={<ChooseLecture></ChooseLecture>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter2-lecture1" element={<Chap2Lecture01></Chap2Lecture01>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter2-lecture2" element={<Chap2Lecture02></Chap2Lecture02>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter2-lecture3-1" element={<Chap2Lecture03FC></Chap2Lecture03FC>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter2-lecture3-2" element={<Chap2Lecture03CC></Chap2Lecture03CC>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter2-lecture4" element={<Chap2Lecture04></Chap2Lecture04>} />
           </Route>
@@ -51,7 +51,7 @@ function App() {
           <Route>
             <Route path="/chapter2-lecture5" element={<Chap2Lecture05></Chap2Lecture05>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter3-lecture1" element={<Chap3Lecture01></Chap3Lecture01>} />
           </Route>
@@ -59,18 +59,19 @@ function App() {
           <Route>
             <Route path="/chapter3-lecture2" element={<Chap3Lecture02></Chap3Lecture02>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter3-lecture3" element={<Chap3Lecture03></Chap3Lecture03>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter3-lecture4" element={<Chap3Lecture04></Chap3Lecture04>} />
           </Route>
-          
+
           <Route>
             <Route path="/chapter3-lecture5" element={<Chap3Lecture05></Chap3Lecture05>} />
           </Route>
+
         </Routes>
       </Router>
     </React.StrictMode>

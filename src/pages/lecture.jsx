@@ -22,7 +22,7 @@ const Lecture = () => {
                 </li>
                 <li>
                     <Link to="/chapter2-lecture5">Chapter 2 - Lecture 5 - UseState</Link>
-                </li>
+                </li><br />
                 <li>
                     <Link to="/chapter3-lecture1">Chapter 3 - Lecture 1 - LifeCycle</Link>
                 </li>
@@ -37,9 +37,12 @@ const Lecture = () => {
                 </li>
                 <li>
                     <Link to="/chapter3-lecture5">Chapter 3 - Lecture 5 - Form Handling </Link>
-                </li>
+                </li><br />
                 <li>
                     <Link to="/chapter4-lecture1">Chapter 4 - Lecture 1 - Axios </Link>
+                </li>
+                <li>
+                    <Link to="/chapter4-lecture2">Chapter 4 - Lecture 2 - Async/Await </Link>
                 </li>
             </ul>
         </React.Fragment>

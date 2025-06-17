@@ -15,6 +15,7 @@ const Chap3Lecture03 = lazy(() => import("../pages/chapter-03/examples/lecture03
 const Chap3Lecture04 = lazy(() => import("../pages/chapter-03/examples/lecture04-renderList"));
 const Chap3Lecture05 = lazy(() => import("../pages/chapter-03/examples/lecture05-formhandling"));
 const Chap4Lecture01 = lazy(() => import("../pages/chapter-04/examples/lecture01-axios"));
+const Chap4Lecture02 = lazy(() => import("../pages/chapter-04/examples/lecture02-async-await"));
 
 export const LectureRoute = [
     {
@@ -72,5 +73,9 @@ export const LectureRoute = [
     {
         path: '/chapter4-lecture1',
         element: <Suspense fallback={<p>Đang tải...</p>}> <Chap4Lecture01></Chap4Lecture01> </Suspense>
+    },
+    {
+        path: '/chapter4-lecture2',
+        element: <Suspense fallback={<p>Đang tải...</p>}><Chap4Lecture02></Chap4Lecture02></Suspense>
     },
 ]

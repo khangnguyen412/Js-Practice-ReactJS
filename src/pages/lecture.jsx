@@ -38,6 +38,9 @@ const Lecture = () => {
                 <li>
                     <Link to="/chapter3-lecture5">Chapter 3 - Lecture 5 - Form Handling </Link>
                 </li>
+                <li>
+                    <Link to="/chapter4-lecture1">Chapter 4 - Lecture 1 - Axios </Link>
+                </li>
             </ul>
         </React.Fragment>
     )

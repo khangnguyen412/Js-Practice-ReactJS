@@ -41,6 +41,9 @@ npm audit fix --force
     "eject": "react-scripts --openssl-legacy-provider eject"
   },
 ```
+- Lỗi: chạy project sau khi cài đặt thêm các npm
+- Xử lý: mở package.json => xem "react-scripts": "^5.0.1", có bị thay đổi thành "^ 0.0.0.0" ko
+- Nếu có fix lại "^5.0.1" và chạy lại npm i
 
 ## Practice React
 - Được note lại trong: ./src

@@ -16,6 +16,9 @@ const Chap3Lecture04 = lazy(() => import("../pages/chapter-03/examples/lecture04
 const Chap3Lecture05 = lazy(() => import("../pages/chapter-03/examples/lecture05-formhandling"));
 const Chap4Lecture01 = lazy(() => import("../pages/chapter-04/examples/lecture01-axios"));
 const Chap4Lecture02 = lazy(() => import("../pages/chapter-04/examples/lecture02-async-await"));
+const Chap4Lecture03 = lazy(() => import("../pages/chapter-04/examples/lecture03-status"));
+const Chap4Lecture04 = lazy(() => import("../pages/chapter-04/examples/lecture04-usecontext"));
+const Chap4Lecture05 = lazy(() => import("../pages/chapter-04/examples/lecture05"));
 
 export const LectureRoute = [
     {
@@ -77,5 +80,17 @@ export const LectureRoute = [
     {
         path: '/chapter4-lecture2',
         element: <Suspense fallback={<p>Đang tải...</p>}><Chap4Lecture02></Chap4Lecture02></Suspense>
+    },
+    {
+        path: '/chapter4-lecture3',
+        element: <Suspense fallback={<p>Đang tải...</p>}><Chap4Lecture03></Chap4Lecture03></Suspense>
+    },
+    {
+        path: '/chapter4-lecture4',
+        element: <Suspense fallback={<p>Đang tải...</p>}><Chap4Lecture04></Chap4Lecture04></Suspense>
+    },
+    {
+        path: '/chapter4-lecture5',
+        element: <Suspense fallback={<p>Đang tải...</p>}><Chap4Lecture05></Chap4Lecture05></Suspense>
     },
 ]

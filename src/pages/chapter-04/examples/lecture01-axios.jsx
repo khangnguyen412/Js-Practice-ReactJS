@@ -60,6 +60,30 @@ const FetchApiPost = () => {
  *  - Có support cancel request không? Có thể hủy request dễ dàng
  *  - Có support HTTP methods mạnh mẽ hơn không? Hỗ trợ nhiều method hơn (GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS)
  *  
+ *  - axios.get(url, config)
+ *  - axios.post(url, data, config)
+ *  - axios.put(url, data, config)
+ *  - axios.delete(url, config)
+ *  
+ *  Các tham số input:
+ *  - url: Đường dẫn API
+ *  - method: Phương thức: get, post, put, delete
+ *  - params: Dữ liệu query string (GET)
+ *  - data: Dữ liệu gửi đi (POST/PUT)
+ *  - headers: Định nghĩa kiểu dữ liệu (Content-Type, Authorization, v.v.)
+ *  - timeout: Thời gian chờ tối đa (ms), nếu vượt quá sẽ throw lỗi
+ *  - onUploadProgress/onDownloadProgress Theo dõi tiến độ tải lên/tải xuống
+ *  - responseType Kiểu phản hồi: 'json', 'text', 'blob', 'stream', v.v.
+ *  - withCredentials: Có gửi kèm cookie không?
+ *  - auth: Thông tin xác thực (username/password)
+ *  
+ *  Các tham số trả về của axios:
+ *  - response.data: Quan trọng nhất – chứa dữ liệu JSON từ server
+ *  - response.status: Kiểm tra xem API trả về 200, 404 hay 500
+ *  - response.statusText: Ví dụ: "OK", "Not Found"
+ *  - response.headers: Kiểm tra các header từ server (token, content-type,...)
+ *  - response.config: Hiển thị lại cấu hình bạn đã dùng để gọi API
+ *  
  *  Gọi API vói cú pháp axios
  */
 const AxiosApiUser = () => {
@@ -72,7 +96,7 @@ const AxiosApiUser = () => {
         try {
             (async () => {
                 const response = await axios.get('https://jsonplaceholder.typicode.com/users')
-                if (!response) throw new Error('Không lấy đc response')
+                if (!response.status) throw new Error('Không lấy đc response')
                 SetUsersData(response.data)
             })()
         } catch (e) {

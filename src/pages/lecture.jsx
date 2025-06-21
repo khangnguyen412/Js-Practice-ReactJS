@@ -44,6 +44,15 @@ const Lecture = () => {
                 <li>
                     <Link to="/chapter4-lecture2">Chapter 4 - Lecture 2 - Async/Await </Link>
                 </li>
+                <li>
+                    <Link to="/chapter4-lecture3">Chapter 4 - Lecture 3 - Loading, Error, Success Status</Link>
+                </li>
+                <li>
+                    <Link to="/chapter4-lecture4">Chapter 4 - Lecture 4 - UseContext</Link>
+                </li>
+                <li>
+                    <Link to="/chapter4-lecture5">Chapter 4 - Lecture 5</Link>
+                </li>
             </ul>
         </React.Fragment>
     )

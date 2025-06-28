@@ -11,7 +11,7 @@ export const StudentProvider = ({ children }) => {
         (async () => {
             try {
                 const response = await axios.get('https://jsonplaceholder.typicode.com/users')
-                if(!response.status) throw new Error("Lỗi http: ", response.statusText)
+                if (!response.status) throw new Error("Lỗi http: ", response.statusText)
                 SetStudent(response.data)
             } catch (err) {
                 console.log(err.message)
@@ -19,12 +19,26 @@ export const StudentProvider = ({ children }) => {
         })()
     }, [])
 
-    useEffect(() => {
-        console.log(Students)
-    }, [Students])
+    const AddStudent = (item) => {
+        if(item.id && item.name){
+            SetStudent([...Students, {
+                id: item.id,
+                name: item.name,
+                username: item.username,
+                email: item.email,
+            }])
+        }else{
+            console.log("Không có thông tin")
+        }
+    }
+
+    const RemoveStudent = (id) => {
+        const NewStudentList = Students.filter(item => item.id !== id)
+        SetStudent(NewStudentList)
+    }
 
     return (
-        <StudentContext.Provider value={{ Students, SetStudent }}>
+        <StudentContext.Provider value={{ Students, SetStudent, AddStudent, RemoveStudent }}>
             {children}
         </StudentContext.Provider>
     )

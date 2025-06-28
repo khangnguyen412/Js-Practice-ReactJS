@@ -1,5 +1,6 @@
+/* eslint-disable */
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // eslint-disable-line
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 const Lecture = () => {
     return (
@@ -52,6 +53,12 @@ const Lecture = () => {
                 </li>
                 <li>
                     <Link to="/chapter4-lecture5">Chapter 4 - Lecture 5</Link>
+                </li><br />
+                <li>
+                    <Link to="/chapter5-lecture1">Chapter 5 - Lecture 1 - Route</Link>
+                </li>
+                <li>
+                    <Link to="/chapter5-lecture2">Chapter 5 - Lecture 2 - Nested Route</Link>
                 </li>
             </ul>
         </React.Fragment>

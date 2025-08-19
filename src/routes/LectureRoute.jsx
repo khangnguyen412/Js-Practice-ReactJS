@@ -21,6 +21,7 @@ const Chap4Lecture04 = lazy(() => import("../pages/chapter-04/examples/lecture04
 const Chap4Lecture05 = lazy(() => import("../pages/chapter-04/examples/lecture05"));
 const Chap5Lecture01 = lazy(() => import("../pages/chapter-05/examples/lecture01-route"));
 const Chap5Lecture02 = lazy(() => import("../pages/chapter-05/examples/lecture02-nestedroutes"));
+const Chap5Lecture03 = lazy(() => import("../pages/chapter-05/examples/lecture03-dynamicroute"));
 
 /**
  *  Chapter 5 Subpage
@@ -29,6 +30,8 @@ const Chap5SubPageHome = lazy(() => import("../pages/chapter-05/pages/home"));
 const Chap5SubPageAbout = lazy(() => import("../pages/chapter-05/pages/about"));
 const Chap5SubPageContact = lazy(() => import("../pages/chapter-05/pages/contact"));
 const Chap5SubPageHook = lazy(() => import("../pages/chapter-05/pages/hook"));
+const Chap5SubPageUsers = lazy(() => import("../pages/chapter-05/pages/users"));
+
 
 export const LectureRoute = [
     {
@@ -203,5 +206,16 @@ export const LectureRoute = [
             { path: 'hook', element: <Chap5SubPageHook />, },
         ]
     },
-    
+    {
+        path: '/chapter5-lecture3/',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <Chap5Lecture03></Chap5Lecture03>
+            </Suspense>
+        ),
+        children: [
+            { index: true, path: 'home', element: <Chap5SubPageHome />, },
+            { path: 'users/:id', element: <Chap5SubPageUsers />, },
+        ]
+    }
 ]

@@ -60,6 +60,9 @@ const Lecture = () => {
                 <li>
                     <Link to="/chapter5-lecture2">Chapter 5 - Lecture 2 - Nested Route</Link>
                 </li>
+                <li>
+                    <Link to="/chapter5-lecture3">Chapter 5 - Lecture 3 - Dynamic Route</Link>
+                </li>
             </ul>
         </React.Fragment>
     )

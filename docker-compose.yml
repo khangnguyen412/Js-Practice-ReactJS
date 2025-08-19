@@ -1,4 +1,4 @@
-name: reactjs-learning
+name: js-reactjs-learning
 
 services:
     react:
@@ -11,3 +11,11 @@ services:
         volumes:
             - ./:/app
         restart: always
+        deploy:
+            resources:
+                limits:
+                    cpus: '1'
+                    memory: 512M
+                reservations:
+                    cpus: '0.5'
+                    memory: 256M

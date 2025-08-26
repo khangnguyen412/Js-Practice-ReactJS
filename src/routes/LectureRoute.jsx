@@ -1,5 +1,7 @@
 /* eslint-disable */
 import React, { lazy, Suspense } from "react";
+import ProtectedRoute from "./ProtectedRoute";
+
 
 const AppDefault = lazy(() => import("../pages/welcome"));
 const ChooseLecture = lazy(() => import("../pages/lecture"));
@@ -22,6 +24,8 @@ const Chap4Lecture05 = lazy(() => import("../pages/chapter-04/examples/lecture05
 const Chap5Lecture01 = lazy(() => import("../pages/chapter-05/examples/lecture01-route"));
 const Chap5Lecture02 = lazy(() => import("../pages/chapter-05/examples/lecture02-nestedroutes"));
 const Chap5Lecture03 = lazy(() => import("../pages/chapter-05/examples/lecture03-dynamicroute"));
+const Chap5Lecture04 = lazy(() => import("../pages/chapter-05/examples/lecture04-prodtectedroute"));
+const Chap5Lecture05 = lazy(() => import("../pages/chapter-05/examples/lecture05-redirectroute"));
 
 /**
  *  Chapter 5 Subpage
@@ -217,5 +221,29 @@ export const LectureRoute = [
             { index: true, path: 'home', element: <Chap5SubPageHome />, },
             { path: 'users/:id', element: <Chap5SubPageUsers />, },
         ]
+    },
+    {
+        path: '/chapter5-lecture4/',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <ProtectedRoute>
+                    <Chap5Lecture04></Chap5Lecture04>
+                </ProtectedRoute>
+            </Suspense>
+        ),
+        children: [
+            { index: true, path: 'home', element: <Chap5SubPageHome />, },
+            { path: 'users/:id', element: <Chap5SubPageUsers />, },
+        ]
+    },
+    {
+        path: '/chapter5-lecture5/',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <ProtectedRoute>
+                    <Chap5Lecture05></Chap5Lecture05>
+                </ProtectedRoute>
+            </Suspense>
+        ),
     }
 ]

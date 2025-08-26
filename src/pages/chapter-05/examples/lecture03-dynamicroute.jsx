@@ -7,16 +7,10 @@ import { Outlet, Routes, Route } from "react-router-dom";
  */
 import Navbar from "../components/navbar-3";
 
-/**
- * Page
- */
-import Home from "../pages/home";
-
-
 const DynamicRoute = () => {
     return (
         <React.Fragment>
-            <Navbar></Navbar>
+            <Navbar id={3}></Navbar>
             <Outlet></Outlet>
         </React.Fragment>
     )

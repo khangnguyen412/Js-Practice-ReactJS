@@ -2,6 +2,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
+const handleLogin = () => {
+    localStorage.setItem("token", "fake-token");
+};
+
 const Lecture = () => {
     return (
         <React.Fragment>
@@ -62,6 +66,12 @@ const Lecture = () => {
                 </li>
                 <li>
                     <Link to="/chapter5-lecture3">Chapter 5 - Lecture 3 - Dynamic Route</Link>
+                </li>
+                <li>
+                    <Link onClick={handleLogin} to="/chapter5-lecture4">Chapter 5 - Lecture 4 - Protected Route</Link>
+                </li>
+                <li>
+                    <Link to="/chapter5-lecture5">Chapter 5 - Lecture 5 - Redirect</Link>
                 </li>
             </ul>
         </React.Fragment>

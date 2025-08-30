@@ -1,7 +1,8 @@
 /* eslint-disable */
 import React, { lazy, Suspense } from "react";
 import ProtectedRoute from "./ProtectedRoute";
-
+import { Provider } from "react-redux";
+import store from "../pages/chapter-06/redux/store";
 
 const AppDefault = lazy(() => import("../pages/welcome"));
 const ChooseLecture = lazy(() => import("../pages/lecture"));
@@ -26,6 +27,10 @@ const Chap5Lecture02 = lazy(() => import("../pages/chapter-05/examples/lecture02
 const Chap5Lecture03 = lazy(() => import("../pages/chapter-05/examples/lecture03-dynamicroute"));
 const Chap5Lecture04 = lazy(() => import("../pages/chapter-05/examples/lecture04-prodtectedroute"));
 const Chap5Lecture05 = lazy(() => import("../pages/chapter-05/examples/lecture05-redirectroute"));
+const Chap6Lecture01 = lazy(() => import("../pages/chapter-06/examples/lecture01-redux"));
+const Chap6Lecture02 = lazy(() => import("../pages/chapter-06/examples/lecture02-slice"));
+const Chap6Lecture05 = lazy(() => import("../pages/chapter-06/examples/lecture05-asyncthunk"));
+
 
 /**
  *  Chapter 5 Subpage
@@ -245,5 +250,36 @@ export const LectureRoute = [
                 </ProtectedRoute>
             </Suspense>
         ),
-    }
+    },
+    {
+        path: '/chapter6-lecture1',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <Provider store={store}>
+                    <Chap6Lecture01></Chap6Lecture01>
+                </Provider>
+            </Suspense>
+        ),
+    },
+    {
+        path: '/chapter6-lecture2',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <Provider store={store}>
+                    <Chap6Lecture02></Chap6Lecture02>
+                </Provider>
+            </Suspense>
+        ),
+    },
+    {
+        path: '/chapter6-lecture5',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <Provider store={store}>
+                    <Chap6Lecture05></Chap6Lecture05>
+                </Provider>
+            </Suspense>
+        ),
+    },
+
 ]

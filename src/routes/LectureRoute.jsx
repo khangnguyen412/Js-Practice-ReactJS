@@ -30,7 +30,9 @@ const Chap5Lecture05 = lazy(() => import("../pages/chapter-05/examples/lecture05
 const Chap6Lecture01 = lazy(() => import("../pages/chapter-06/examples/lecture01-redux"));
 const Chap6Lecture02 = lazy(() => import("../pages/chapter-06/examples/lecture02-slice"));
 const Chap6Lecture05 = lazy(() => import("../pages/chapter-06/examples/lecture05-asyncthunk"));
-
+const ChapExtLecture01 = lazy(() => import("../pages/chapter-extension/examples/lecture01-usememo"));
+const ChapExtLecture02 = lazy(() => import("../pages/chapter-extension/examples/lecture02-usecallback"));
+const ChapExtLecture03 = lazy(() => import("../pages/chapter-extension/examples/lecture03-useform"));
 
 /**
  *  Chapter 5 Subpage
@@ -278,6 +280,30 @@ export const LectureRoute = [
                 <Provider store={store}>
                     <Chap6Lecture05></Chap6Lecture05>
                 </Provider>
+            </Suspense>
+        ),
+    },
+    {
+        path: '/chapter-extension1',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <ChapExtLecture01></ChapExtLecture01>
+            </Suspense>
+        ),
+    },
+    {
+        path: '/chapter-extension2',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <ChapExtLecture02></ChapExtLecture02>
+            </Suspense>
+        ),
+    },
+    {
+        path: '/chapter-extension3',
+        element: (
+            <Suspense fallback={<p>Đang tải...</p>}>
+                <ChapExtLecture03></ChapExtLecture03>
             </Suspense>
         ),
     },

@@ -81,6 +81,15 @@ const Lecture = () => {
                 </li>
                 <li>
                     <Link to="/chapter6-lecture5">Chapter 6 - Lecture 5 - AsyncThunk</Link>
+                </li><br />
+                <li>
+                    <Link to="/chapter-extension1">ChapterExt - UseMeMo</Link>
+                </li>
+                <li>
+                    <Link to="/chapter-extension2">ChapterExt - UseCallback</Link>
+                </li>
+                <li>
+                    <Link to="/chapter-extension3">ChapterExt - UseForm</Link>
                 </li>
             </ul>
         </React.Fragment>
